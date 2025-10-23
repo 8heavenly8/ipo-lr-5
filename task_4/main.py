@@ -1,9 +1,6 @@
-string = input("введите строку:")
-list_str = string.split( )
-num = 0
-new_string = ""
-while len(list_str) > num:
-    new_string += list_str[num][0]
-    num += 1
-print(f"строка из первых букв: {new_string}")
-    
+string = input("введите строку:")#просим пользователя ввести строку
+list_str = string.split( )# делаем из строки список за разделитель принимаем пробел записываем это в переменную
+new_string = ""# в эту строку мы позже будем сзаписывать наш результат
+for element in list_str:#создаем цикл который перебирает элементы в списке
+    new_string += element[0]# добавляем к строке первый символ каждого элемента списка
+print(f"строка из первых букв: {new_string}")#выводим итоговую строку
